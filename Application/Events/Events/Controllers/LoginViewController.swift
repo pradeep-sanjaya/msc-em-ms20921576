@@ -1,9 +1,8 @@
 import UIKit
 import FacebookCore
-import FacebookLogin
 import Firebase
 
-class LoginViewController: BaseViewController, LoginButtonDelegate, UITextFieldDelegate {
+class LoginViewController: BaseViewController, UITextFieldDelegate {
     
     var user: User?
     
@@ -126,166 +125,9 @@ class LoginViewController: BaseViewController, LoginButtonDelegate, UITextFieldD
     
     }
     
-    @IBAction private func loginWithFacebookButt() {
-        
-        let loginManager = LoginManager()
-        loginManager.logIn(
-            permissions: [.email, .publicProfile],
-            viewController: self
-        ) { result in
-            self.loginManagerDidComplete(result)
-        }
-    }
-    
     @IBAction func viewAsGuestAction(_ sender: UIButton) {
         UserMode.isAnonymous = true
         self.setRootViewController(name: "MainTabBar")
     }
-    
-    @IBAction func getInfoAction(_ sender: UIButton) {
-        
-        let fbLoginManager : LoginManager = LoginManager()
-        fbLoginManager.logIn(permissions: ["email"], from: self) {
-            (result, error) -> Void in
-            if (error == nil){
-                let fbloginresult : LoginManagerLoginResult = result!
-                
-                if (result?.isCancelled)!{
-                    return
-                }
-                
-                if (fbloginresult.grantedPermissions.contains("email")) {
-                    self.getFacebookUserData()
-                }
-            }
-        }
-        
-    }
-    
-    
 
-    
-    // MARK - LoginButtonDelegate methods
-    func loginManagerDidComplete(_ result: LoginResult) {
-        
-        var title = ""
-        var message = ""
-        
-        switch result {
-        case .cancelled:
-            title="Login Cancelled"
-            message="User cancelled login."
-            self.presentHideAlert(withTitle: Bundle.appName(), message: message)
-        case .failed(let error):
-            title = "Login Fail"
-            message = "Login failed with error \(error)"
-            self.presentHideAlert(withTitle: Bundle.appName(), message: message)
-        case .success(let grantedPermissions, _, _):
-            title = "Login Success"
-            message = "Login succeeded with granted permissions: \(grantedPermissions)"
-            
-            getFacebookUserData()
-        }
-    }
-    
-    func loginButton(_ loginButton: FBLoginButton, didCompleteWith result: LoginManagerLoginResult?, error: Error?) {
-        print("Did complete login via LoginButton with result \(String(describing: result)) " +
-            "error\(String(describing: error))")
-    }
-    
-    func loginButtonDidLogOut(_ loginButton: FBLoginButton) {
-        print("Did logout via LoginButton")
-    }
-    
-    func getFacebookUserData() {
-        
-        showHUD()
-        
-        if ((AccessToken.current) != nil) {
-            GraphRequest(graphPath: "me", parameters: ["fields": "id, name, first_name, last_name, picture.type(large), email"]).start(completionHandler: {
-                (connection, result, error) -> Void in
-                
-                if (error == nil) {
-                    guard let userDict = result as? [String:Any] else {
-                        return
-                    }
-                    
-                    //print("facebook graph data: \(userDict)")
-                    
-                    var token    = ""
-                    var name     = ""
-                    var email    = ""
-                    var photoUrl = ""
-                    
-                    if let fbId = userDict["id"] as? String {
-                        token = fbId
-                    }
-                    
-                    if let fbName = userDict["name"] as? String {
-                        name = fbName
-                    }
-                    
-                    if let fbEmail = userDict["email"] as? String {
-                        email = fbEmail
-                    }
-                    
-                    if let picture = userDict["picture"] as? [String:Any],
-                        let imgData = picture["data"] as? [String:Any],
-                        let imgUrl = imgData["url"] as? String {
-                        
-                        photoUrl = imgUrl
-                    }
-                    
-
-                    
-                    var fbUser = User(
-                        type: AuthType.facebook,
-                        token: token,
-                        name: name,
-                        email: email,
-                        profileUrl: "",
-                        photoUrl: photoUrl
-                    )
-                    
-                    self.userService.getUser(token: token) {
-                        firebaseUser in
-                        if let fireUser = firebaseUser {
-                            fbUser.profileUrl = fireUser.profileUrl
-                            
-                            if (fireUser.photoUrl == "") {
-                                self.storageService.getImageByURLString(urlString: photoUrl) {
-                                    image in
-                                    
-                                    self.storageService.uploadUserProfile(image: image, token: fbUser.token) {
-                                        (isSuccess, url) in
-                                        photoUrl = url!
-                                        
-                                        fbUser.photoUrl = photoUrl
-                                        
-                                        self.userService.saveUser(user: fbUser)
-                                        self.userService.setLocalUser(user: fbUser)
-                                    }
-                                }
-                            } else {
-                                self.userService.saveUser(user: fbUser)
-                                self.userService.setLocalUser(user: fbUser)
-                            }
-                        
-                        } else {
-                            self.userService.saveUser(user: fbUser)
-                            self.userService.setLocalUser(user: fbUser)
-                        }
-                    }
-
-                    self.setRootViewController(name: "MainTabBar")
-
-                    self.hideHUD()
-
-                } else {
-                    self.hideHUD()
-                    self.presentHideAlert(withTitle: Bundle.appName(), message: "An error occurred")
-                }
-            })
-        }
-    }
 }

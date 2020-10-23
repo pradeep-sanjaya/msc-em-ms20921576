@@ -11,13 +11,13 @@
         <!--Login-->
         <scene sceneID="NhG-XY-G6b">
             <objects>
-                <viewController storyboardIdentifier="LoginViewController" title="Login" id="RND-K0-ivf" customClass="LoginViewController" customModule="NIBM_Events" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LoginViewController" title="Login" id="RND-K0-ivf" customClass="LoginViewController" customModule="Events" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="AT7-ch-g9A">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalCentering" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="bqV-3V-bNj">
-                                <rect key="frame" x="40" y="424" width="334" height="398"/>
+                                <rect key="frame" x="40" y="490.5" width="334" height="331.5"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JXX-dq-TlS" customClass="CornerTextField" customModule="CornerUI">
                                         <rect key="frame" x="0.0" y="0.0" width="334" height="44"/>
@@ -39,7 +39,7 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ejB-7F-bwu">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ejB-7F-bwu" customClass="CornerTextField" customModule="CornerUI">
                                         <rect key="frame" x="0.0" y="59" width="334" height="44"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
@@ -47,11 +47,24 @@
                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                 <integer key="value" value="8"/>
                                             </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="bottomLeftCorner" value="YES"/>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" name="DarkBlue"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <integer key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="bottomRightCorner" value="YES"/>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="topRightCorner" value="YES"/>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="topLeftCorner" value="YES"/>
                                         </userDefinedRuntimeAttributes>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RKY-yc-lE5" customClass="CornerButton" customModule="CornerUI">
                                         <rect key="frame" x="0.0" y="118" width="334" height="44"/>
                                         <color key="backgroundColor" name="LightBloe"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="44" id="AVo-Em-IjQ"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="14"/>
                                         <state key="normal" title="LOGIN">
                                             <color key="titleColor" name="White"/>
@@ -75,38 +88,8 @@
                                             <action selector="loginButt:" destination="RND-K0-ivf" eventType="touchUpInside" id="xaM-MD-bpI"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pnj-LI-oyi" customClass="CornerButton" customModule="CornerUI">
-                                        <rect key="frame" x="0.0" y="177" width="334" height="44"/>
-                                        <color key="backgroundColor" name="LightBloe"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="44" id="wJv-qQ-vvf"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="14"/>
-                                        <state key="normal" title="CONTINUE WITH FACEBOOK">
-                                            <color key="titleColor" name="White"/>
-                                            <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="default"/>
-                                        </state>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="boolean" keyPath="bottomLeftCorner" value="YES"/>
-                                            <userDefinedRuntimeAttribute type="boolean" keyPath="topRightCorner" value="YES"/>
-                                            <userDefinedRuntimeAttribute type="boolean" keyPath="topLeftCorner" value="YES"/>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                <real key="value" value="10"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                                <color key="value" name="LightBloe"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="boolean" keyPath="bottomRightCorner" value="YES"/>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                                <real key="value" value="1"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                        <connections>
-                                            <action selector="loginWithFacebookButt" destination="RND-K0-ivf" eventType="touchUpInside" id="f8O-H7-ifk"/>
-                                        </connections>
-                                    </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cW4-0p-ldn" userLabel="GUEST" customClass="CornerButton" customModule="CornerUI">
-                                        <rect key="frame" x="0.0" y="236" width="334" height="44"/>
+                                        <rect key="frame" x="0.0" y="177" width="334" height="44"/>
                                         <color key="backgroundColor" name="LightBloe"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="14"/>
                                         <state key="normal" title="VIEW AS GUEST">
@@ -132,7 +115,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="niS-6D-bcu">
-                                        <rect key="frame" x="0.0" y="306" width="334" height="22"/>
+                                        <rect key="frame" x="0.0" y="243.5" width="334" height="29"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="14"/>
                                         <state key="normal" title="FORGOT PASSWORD"/>
                                         <connections>
@@ -140,7 +123,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PfJ-I8-JRk">
-                                        <rect key="frame" x="0.0" y="354" width="334" height="44"/>
+                                        <rect key="frame" x="0.0" y="302.5" width="334" height="29"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="14"/>
                                         <state key="normal" title="REGISTER"/>
                                         <connections>
@@ -149,16 +132,13 @@
                                     </button>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="pnj-LI-oyi" firstAttribute="height" secondItem="ejB-7F-bwu" secondAttribute="height" id="50P-Ps-dac"/>
-                                    <constraint firstItem="niS-6D-bcu" firstAttribute="height" secondItem="pnj-LI-oyi" secondAttribute="height" multiplier="0.5" id="OnH-ze-qbY"/>
-                                    <constraint firstItem="cW4-0p-ldn" firstAttribute="height" secondItem="pnj-LI-oyi" secondAttribute="height" id="gbd-LM-A4S"/>
-                                    <constraint firstItem="pnj-LI-oyi" firstAttribute="height" secondItem="JXX-dq-TlS" secondAttribute="height" id="lUN-pb-mzu"/>
-                                    <constraint firstItem="PfJ-I8-JRk" firstAttribute="height" secondItem="pnj-LI-oyi" secondAttribute="height" id="one-Q2-Ltd"/>
-                                    <constraint firstItem="RKY-yc-lE5" firstAttribute="height" secondItem="pnj-LI-oyi" secondAttribute="height" id="weD-jR-svg"/>
+                                    <constraint firstItem="RKY-yc-lE5" firstAttribute="height" secondItem="JXX-dq-TlS" secondAttribute="height" id="GOR-vC-FK3"/>
+                                    <constraint firstItem="RKY-yc-lE5" firstAttribute="height" secondItem="ejB-7F-bwu" secondAttribute="height" id="GRa-KF-Gue"/>
+                                    <constraint firstItem="RKY-yc-lE5" firstAttribute="height" secondItem="cW4-0p-ldn" secondAttribute="height" id="Qlz-fu-0Qc"/>
                                 </constraints>
                             </stackView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo" translatesAutoresizingMaskIntoConstraints="NO" id="Xa2-uh-rc4">
-                                <rect key="frame" x="70.5" y="155" width="273" height="190"/>
+                                <rect key="frame" x="70.5" y="221.5" width="273" height="190"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="273" id="Q3a-Hc-ygy"/>
                                     <constraint firstAttribute="height" constant="190" id="l2h-c2-uC8"/>
@@ -189,7 +169,7 @@
         <!--Register-->
         <scene sceneID="5Iy-P2-nuK">
             <objects>
-                <viewController storyboardIdentifier="Register" title="Register" id="Tte-43-R2K" customClass="RegisterViewController" customModule="NIBM_Events" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Register" title="Register" id="Tte-43-R2K" customClass="RegisterViewController" customModule="Events" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="bHb-F9-gLW">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -342,7 +322,7 @@
         <!--Forgot Password-->
         <scene sceneID="PYc-qx-Fr0">
             <objects>
-                <viewController storyboardIdentifier="ForgotPassword" title="Forgot Password" id="siV-Qp-B8J" customClass="ForgotPasswordViewController" customModule="NIBM_Events" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ForgotPassword" title="Forgot Password" id="siV-Qp-B8J" customClass="ForgotPasswordViewController" customModule="Events" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="S7b-JK-NWT">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -440,7 +420,7 @@
         <!--Main Navigation Controller-->
         <scene sceneID="bIo-6D-arK">
             <objects>
-                <navigationController storyboardIdentifier="MainNavigationController" automaticallyAdjustsScrollViewInsets="NO" hidesBarsOnTap="YES" id="N9g-yn-18W" customClass="MainNavigationController" customModule="NIBM_Events" customModuleProvider="target" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="MainNavigationController" automaticallyAdjustsScrollViewInsets="NO" hidesBarsOnTap="YES" id="N9g-yn-18W" customClass="MainNavigationController" customModule="Events" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="nqC-G6-xgL">
@@ -462,7 +442,7 @@
         <!--Touch Id View Controller-->
         <scene sceneID="3Pg-zw-6Eo">
             <objects>
-                <viewController storyboardIdentifier="TouchIdViewController" id="tEA-B2-euN" customClass="TouchIdViewController" customModule="NIBM_Events" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="TouchIdViewController" id="tEA-B2-euN" customClass="TouchIdViewController" customModule="Events" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="adA-X9-jmT">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -531,7 +511,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Logo" width="512" height="384"/>
+        <image name="Logo" width="90" height="90"/>
         <image name="faceIcon" width="69.5" height="69.5"/>
         <namedColor name="Black">
             <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

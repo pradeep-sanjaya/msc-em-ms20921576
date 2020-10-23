@@ -10,7 +10,7 @@
         <!--Main Tab Bar Controller-->
         <scene sceneID="qRy-gz-wjg">
             <objects>
-                <tabBarController storyboardIdentifier="MainTabBar" id="UKZ-y8-AGY" customClass="MainTabBarController" customModule="NIBM_Events" customModuleProvider="target" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="MainTabBar" id="UKZ-y8-AGY" customClass="MainTabBarController" customModule="Events" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" id="RQ1-ZN-jvI">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -34,7 +34,7 @@
         <!--Recent Events-->
         <scene sceneID="Ct4-Sg-koh">
             <objects>
-                <viewController storyboardIdentifier="Home" id="aJJ-c7-gB3" customClass="HomeViewController" customModule="NIBM_Events" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Home" id="aJJ-c7-gB3" customClass="HomeViewController" customModule="Events" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="tlO-VU-A6c"/>
                         <viewControllerLayoutGuide type="bottom" id="wNV-2e-daY"/>
@@ -54,7 +54,7 @@
                                     <inset key="sectionInset" minX="10" minY="10" maxX="10" maxY="10"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="EventCell" id="yad-dm-yjt" userLabel="EventCell" customClass="EventCell" customModule="NIBM_Events" customModuleProvider="target">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="EventCell" id="yad-dm-yjt" userLabel="EventCell" customClass="EventCell" customModule="Events" customModuleProvider="target">
                                         <rect key="frame" x="15.5" y="10" width="290" height="270"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -134,7 +134,7 @@
                                                             </subviews>
                                                             <color key="backgroundColor" name="LightBloe"/>
                                                         </view>
-                                                        <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Z8q-3S-PVP" userLabel="profileImage" customClass="RoundedImageView" customModule="NIBM_Events" customModuleProvider="target">
+                                                        <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Z8q-3S-PVP" userLabel="profileImage" customClass="RoundedImageView" customModule="Events" customModuleProvider="target">
                                                             <rect key="frame" x="8" y="8" width="35" height="35"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                             <color key="backgroundColor" name="Background4"/>
@@ -218,7 +218,7 @@
         <!--Submit an Event-->
         <scene sceneID="Leq-Ns-00Z">
             <objects>
-                <viewController storyboardIdentifier="SubmitEvent" id="QgP-Ba-Mn3" customClass="SubmitEventViewController" customModule="NIBM_Events" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SubmitEvent" id="QgP-Ba-Mn3" customClass="SubmitEventViewController" customModule="Events" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="a1R-Ba-dLP"/>
                         <viewControllerLayoutGuide type="bottom" id="5Nf-st-vj2"/>
@@ -466,7 +466,7 @@
         <!--Profile View Controller-->
         <scene sceneID="pxc-9M-Orp">
             <objects>
-                <viewController storyboardIdentifier="ProfileViewController" id="zXH-IW-OnR" customClass="ProfileViewController" customModule="NIBM_Events" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ProfileViewController" id="zXH-IW-OnR" customClass="ProfileViewController" customModule="Events" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Uop-nw-Vck"/>
                         <viewControllerLayoutGuide type="bottom" id="Zqm-KQ-A5W"/>
@@ -486,7 +486,7 @@
                                         <color key="textColor" red="0.1824207165" green="0.2145885287" blue="0.25577965559999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IoQ-Sl-cvh" userLabel="profilePhoto" customClass="RoundedImageView" customModule="NIBM_Events" customModuleProvider="target">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IoQ-Sl-cvh" userLabel="profilePhoto" customClass="RoundedImageView" customModule="Events" customModuleProvider="target">
                                         <rect key="frame" x="10" y="43" width="200" height="200"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" name="Background3"/>
@@ -645,7 +645,7 @@
         <!--Event Details View Controller-->
         <scene sceneID="8Xh-oU-w1M">
             <objects>
-                <viewController storyboardIdentifier="EventDetails" id="sFl-45-HUl" customClass="EventDetailsViewController" customModule="NIBM_Events" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="EventDetails" id="sFl-45-HUl" customClass="EventDetailsViewController" customModule="Events" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="sMm-uf-Mei"/>
                         <viewControllerLayoutGuide type="bottom" id="HuI-Eu-r7Q"/>
@@ -888,8 +888,8 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="zWC-7f-okG" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="" image="tab_home" id="hLq-F2-n3X"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="aLh-jl-fqF" customClass="MainNavigationBar" customModule="NIBM_Events" customModuleProvider="target">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="aLh-jl-fqF" customClass="MainNavigationBar" customModule="Events" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" name="LightBloe"/>
                         <color key="barTintColor" name="Background1"/>
@@ -916,7 +916,7 @@
                     <tabBarItem key="tabBarItem" title="" image="tab_submit" id="oVn-1M-XWw"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Geg-Sz-rEj">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <color key="barTintColor" name="Background1"/>
@@ -936,11 +936,11 @@
         <!--Profile Navigation Controller-->
         <scene sceneID="zes-As-RF2">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="JEN-AN-sYw" customClass="ProfileNavigationController" customModule="NIBM_Events" customModuleProvider="target" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="JEN-AN-sYw" customClass="ProfileNavigationController" customModule="Events" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="" image="tab_profile" id="0LU-G1-5cp"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="j3N-T3-K8v">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <color key="barTintColor" name="Background1"/>
@@ -957,7 +957,7 @@
         <!--User View Controller-->
         <scene sceneID="MA4-SI-xD6">
             <objects>
-                <viewController storyboardIdentifier="UserViewController" id="HQv-Z5-dFS" customClass="UserViewController" customModule="NIBM_Events" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="UserViewController" id="HQv-Z5-dFS" customClass="UserViewController" customModule="Events" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Sgy-h0-VcR"/>
                         <viewControllerLayoutGuide type="bottom" id="8uf-M0-AWR"/>
@@ -970,7 +970,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="700"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rrg-SE-6Wi" userLabel="profilePhoto" customClass="RoundedImageView" customModule="NIBM_Events" customModuleProvider="target">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rrg-SE-6Wi" userLabel="profilePhoto" customClass="RoundedImageView" customModule="Events" customModuleProvider="target">
                                         <rect key="frame" x="8" y="8" width="200" height="200"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" name="Background3"/>
