@@ -1,0 +1,549 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Login-->
+        <scene sceneID="NhG-XY-G6b">
+            <objects>
+                <viewController storyboardIdentifier="LoginViewController" title="Login" id="RND-K0-ivf" customClass="LoginViewController" customModule="NIBM_Events" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="AT7-ch-g9A">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalCentering" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="bqV-3V-bNj">
+                                <rect key="frame" x="40" y="424" width="334" height="398"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JXX-dq-TlS" customClass="CornerTextField" customModule="CornerUI">
+                                        <rect key="frame" x="0.0" y="0.0" width="334" height="44"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" textContentType="username"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="bottomLeftCorner" value="YES"/>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="bottomRightCorner" value="YES"/>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="topRightCorner" value="YES"/>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="topLeftCorner" value="YES"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" name="DarkBlue"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="8"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ejB-7F-bwu">
+                                        <rect key="frame" x="0.0" y="59" width="334" height="44"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <integer key="value" value="8"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RKY-yc-lE5" customClass="CornerButton" customModule="CornerUI">
+                                        <rect key="frame" x="0.0" y="118" width="334" height="44"/>
+                                        <color key="backgroundColor" name="LightBloe"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="14"/>
+                                        <state key="normal" title="LOGIN">
+                                            <color key="titleColor" name="White"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="topLeftCorner" value="YES"/>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="topRightCorner" value="YES"/>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="bottomLeftCorner" value="YES"/>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="bottomRightCorner" value="YES"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" name="LightBloe"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="8"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="loginButt:" destination="RND-K0-ivf" eventType="touchUpInside" id="xaM-MD-bpI"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pnj-LI-oyi" customClass="CornerButton" customModule="CornerUI">
+                                        <rect key="frame" x="0.0" y="177" width="334" height="44"/>
+                                        <color key="backgroundColor" name="LightBloe"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="44" id="wJv-qQ-vvf"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="14"/>
+                                        <state key="normal" title="CONTINUE WITH FACEBOOK">
+                                            <color key="titleColor" name="White"/>
+                                            <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="default"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="bottomLeftCorner" value="YES"/>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="topRightCorner" value="YES"/>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="topLeftCorner" value="YES"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" name="LightBloe"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="bottomRightCorner" value="YES"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="loginWithFacebookButt" destination="RND-K0-ivf" eventType="touchUpInside" id="f8O-H7-ifk"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cW4-0p-ldn" userLabel="GUEST" customClass="CornerButton" customModule="CornerUI">
+                                        <rect key="frame" x="0.0" y="236" width="334" height="44"/>
+                                        <color key="backgroundColor" name="LightBloe"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="14"/>
+                                        <state key="normal" title="VIEW AS GUEST">
+                                            <color key="titleColor" name="White"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="topLeftCorner" value="YES"/>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="topRightCorner" value="YES"/>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="bottomLeftCorner" value="YES"/>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="bottomRightCorner" value="YES"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" name="LightBloe"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="8"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="viewAsGuestAction:" destination="RND-K0-ivf" eventType="touchUpInside" id="nAn-qb-yUF"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="niS-6D-bcu">
+                                        <rect key="frame" x="0.0" y="306" width="334" height="22"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="14"/>
+                                        <state key="normal" title="FORGOT PASSWORD"/>
+                                        <connections>
+                                            <segue destination="siV-Qp-B8J" kind="show" id="wh0-bZ-rQ3"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PfJ-I8-JRk">
+                                        <rect key="frame" x="0.0" y="354" width="334" height="44"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="14"/>
+                                        <state key="normal" title="REGISTER"/>
+                                        <connections>
+                                            <segue destination="Tte-43-R2K" kind="show" id="8S8-8D-n9j"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="pnj-LI-oyi" firstAttribute="height" secondItem="ejB-7F-bwu" secondAttribute="height" id="50P-Ps-dac"/>
+                                    <constraint firstItem="niS-6D-bcu" firstAttribute="height" secondItem="pnj-LI-oyi" secondAttribute="height" multiplier="0.5" id="OnH-ze-qbY"/>
+                                    <constraint firstItem="cW4-0p-ldn" firstAttribute="height" secondItem="pnj-LI-oyi" secondAttribute="height" id="gbd-LM-A4S"/>
+                                    <constraint firstItem="pnj-LI-oyi" firstAttribute="height" secondItem="JXX-dq-TlS" secondAttribute="height" id="lUN-pb-mzu"/>
+                                    <constraint firstItem="PfJ-I8-JRk" firstAttribute="height" secondItem="pnj-LI-oyi" secondAttribute="height" id="one-Q2-Ltd"/>
+                                    <constraint firstItem="RKY-yc-lE5" firstAttribute="height" secondItem="pnj-LI-oyi" secondAttribute="height" id="weD-jR-svg"/>
+                                </constraints>
+                            </stackView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo" translatesAutoresizingMaskIntoConstraints="NO" id="Xa2-uh-rc4">
+                                <rect key="frame" x="70.5" y="155" width="273" height="190"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="273" id="Q3a-Hc-ygy"/>
+                                    <constraint firstAttribute="height" constant="190" id="l2h-c2-uC8"/>
+                                </constraints>
+                                <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="medium"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="bqV-3V-bNj" firstAttribute="leading" secondItem="TNA-9E-gMV" secondAttribute="leading" constant="40" id="KgI-2M-lsW"/>
+                            <constraint firstItem="JXX-dq-TlS" firstAttribute="top" secondItem="Xa2-uh-rc4" secondAttribute="bottom" constant="79" id="LjF-zh-Vbo"/>
+                            <constraint firstItem="TNA-9E-gMV" firstAttribute="bottom" secondItem="bqV-3V-bNj" secondAttribute="bottom" constant="40" id="NFk-Os-TLY"/>
+                            <constraint firstItem="TNA-9E-gMV" firstAttribute="trailing" secondItem="bqV-3V-bNj" secondAttribute="trailing" constant="40" id="qlF-MX-Jdg"/>
+                            <constraint firstItem="Xa2-uh-rc4" firstAttribute="centerX" secondItem="JXX-dq-TlS" secondAttribute="centerX" id="yfP-ov-8gK"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="TNA-9E-gMV"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Login" id="XuV-5q-lnl"/>
+                    <connections>
+                        <outlet property="emailTxt" destination="JXX-dq-TlS" id="O0E-gd-cnf"/>
+                        <outlet property="passwordTxt" destination="ejB-7F-bwu" id="seo-NU-w8B"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uOd-Sw-dZo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="686.95652173913049" y="-60.267857142857139"/>
+        </scene>
+        <!--Register-->
+        <scene sceneID="5Iy-P2-nuK">
+            <objects>
+                <viewController storyboardIdentifier="Register" title="Register" id="Tte-43-R2K" customClass="RegisterViewController" customModule="NIBM_Events" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="bHb-F9-gLW">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="9oJ-pT-dKb">
+                                <rect key="frame" x="40" y="128" width="334" height="440"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NAME" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GBK-s1-Kjh">
+                                        <rect key="frame" x="0.0" y="0.0" width="334" height="44"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="14"/>
+                                        <color key="textColor" name="LightBloe"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4nN-vt-tJQ" customClass="CornerTextField" customModule="CornerUI">
+                                        <rect key="frame" x="0.0" y="44" width="334" height="44"/>
+                                        <color key="textColor" name="Black"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="8"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" name="DarkBlue"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="topLeftCorner" value="YES"/>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="topRightCorner" value="YES"/>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="bottomLeftCorner" value="YES"/>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="bottomRightCorner" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="EMAIL" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="num-Ak-sRz">
+                                        <rect key="frame" x="0.0" y="88" width="334" height="44"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="14"/>
+                                        <color key="textColor" name="LightBloe"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="A09-Ov-tDg" customClass="CornerTextField" customModule="CornerUI">
+                                        <rect key="frame" x="0.0" y="132" width="334" height="44"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="8"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" name="DarkBlue"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="topLeftCorner" value="YES"/>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="topRightCorner" value="YES"/>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="bottomLeftCorner" value="YES"/>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="bottomRightCorner" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PASSWORD" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hLJ-5p-qby">
+                                        <rect key="frame" x="0.0" y="176" width="334" height="44"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="14"/>
+                                        <color key="textColor" name="LightBloe"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="X5B-A0-yzX">
+                                        <rect key="frame" x="0.0" y="220" width="334" height="44"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <integer key="value" value="8"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="RETYPE PASSORD" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JAo-ey-8CC">
+                                        <rect key="frame" x="0.0" y="264" width="334" height="44"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="14"/>
+                                        <color key="textColor" name="LightBloe"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Hm3-Ux-21B">
+                                        <rect key="frame" x="0.0" y="308" width="334" height="44"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <integer key="value" value="8"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d5y-Fc-DHA">
+                                        <rect key="frame" x="0.0" y="352" width="334" height="44"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MQm-7V-JTY" customClass="CornerButton" customModule="CornerUI">
+                                        <rect key="frame" x="0.0" y="396" width="334" height="44"/>
+                                        <color key="backgroundColor" name="LightBloe"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="44" id="QyW-Xh-mMd"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="14"/>
+                                        <state key="normal" title="REGISTER">
+                                            <color key="titleColor" name="White"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="8"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="bottomRightCorner" value="YES"/>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="bottomLeftCorner" value="YES"/>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="topRightCorner" value="YES"/>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="topLeftCorner" value="YES"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="0.0"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="registerAction:" destination="Tte-43-R2K" eventType="touchUpInside" id="ybR-ro-oaQ"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="9oJ-pT-dKb" firstAttribute="top" secondItem="6zu-AO-9hg" secondAttribute="top" constant="40" id="07u-fM-1Xw"/>
+                            <constraint firstItem="9oJ-pT-dKb" firstAttribute="leading" secondItem="6zu-AO-9hg" secondAttribute="leading" constant="40" id="TKf-er-uMU"/>
+                            <constraint firstItem="6zu-AO-9hg" firstAttribute="trailing" secondItem="9oJ-pT-dKb" secondAttribute="trailing" constant="40" id="bPb-Qd-SFc"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6zu-AO-9hg"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Register" id="zq8-jF-zOt">
+                        <barButtonItem key="backBarButtonItem" title="Login" id="dgI-MN-FDe"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="emailTxt" destination="A09-Ov-tDg" id="3oK-3D-u3i"/>
+                        <outlet property="nameTxt" destination="4nN-vt-tJQ" id="Wsn-4D-sT3"/>
+                        <outlet property="passwordRetypeTxt" destination="Hm3-Ux-21B" id="OZY-9l-Wt6"/>
+                        <outlet property="passwordTxt" destination="X5B-A0-yzX" id="Grq-RS-wgn"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8vV-yX-B28" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1636" y="-60"/>
+        </scene>
+        <!--Forgot Password-->
+        <scene sceneID="PYc-qx-Fr0">
+            <objects>
+                <viewController storyboardIdentifier="ForgotPassword" title="Forgot Password" id="siV-Qp-B8J" customClass="ForgotPasswordViewController" customModule="NIBM_Events" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="S7b-JK-NWT">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalCentering" translatesAutoresizingMaskIntoConstraints="NO" id="gzJ-Ia-Y3F">
+                                <rect key="frame" x="40" y="168" width="334" height="162.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="EMAIL" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="taK-tO-8i1">
+                                        <rect key="frame" x="0.0" y="0.0" width="334" height="17"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="14"/>
+                                        <color key="textColor" name="LightBloe"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aa9-FU-V5d" customClass="CornerTextField" customModule="CornerUI">
+                                        <rect key="frame" x="0.0" y="30.5" width="334" height="44"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" textContentType="email"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="bottomLeftCorner" value="YES"/>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="bottomRightCorner" value="YES"/>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="topRightCorner" value="YES"/>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="topLeftCorner" value="YES"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" name="DarkBlue"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="8"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hsb-v1-Olm">
+                                        <rect key="frame" x="0.0" y="74.5" width="334" height="44"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AvD-R2-TfQ" customClass="CornerButton" customModule="CornerUI">
+                                        <rect key="frame" x="0.0" y="118.5" width="334" height="44"/>
+                                        <color key="backgroundColor" name="LightBloe"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="44" id="BYZ-da-86I"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="14"/>
+                                        <state key="normal" title="RESET PASSWORD">
+                                            <color key="titleColor" name="White"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="topLeftCorner" value="YES"/>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="topRightCorner" value="YES"/>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="bottomLeftCorner" value="YES"/>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="bottomRightCorner" value="YES"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" name="LightBloe"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="8"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="resetPasswordAction:" destination="siV-Qp-B8J" eventType="touchUpInside" id="CgW-57-Rgw"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="aa9-FU-V5d" firstAttribute="height" secondItem="AvD-R2-TfQ" secondAttribute="height" id="2rE-sY-n1A"/>
+                                    <constraint firstItem="Hsb-v1-Olm" firstAttribute="height" secondItem="AvD-R2-TfQ" secondAttribute="height" id="8gM-2B-3t5"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="gzJ-Ia-Y3F" firstAttribute="top" secondItem="Kwb-in-Jbd" secondAttribute="top" constant="80" id="11g-aY-8xN"/>
+                            <constraint firstItem="Kwb-in-Jbd" firstAttribute="trailing" secondItem="gzJ-Ia-Y3F" secondAttribute="trailing" constant="40" id="sNR-GE-JfU"/>
+                            <constraint firstItem="gzJ-Ia-Y3F" firstAttribute="leading" secondItem="Kwb-in-Jbd" secondAttribute="leading" constant="40" id="w3t-mg-V1a"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Kwb-in-Jbd"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Forgot Password" id="w8F-nN-cNt">
+                        <barButtonItem key="backBarButtonItem" title="Login" id="KKU-ZB-sdJ"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="emailTxt" destination="aa9-FU-V5d" id="kIj-h8-gAv"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JbL-5u-ZOs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1635" y="669"/>
+        </scene>
+        <!--Main Navigation Controller-->
+        <scene sceneID="bIo-6D-arK">
+            <objects>
+                <navigationController storyboardIdentifier="MainNavigationController" automaticallyAdjustsScrollViewInsets="NO" hidesBarsOnTap="YES" id="N9g-yn-18W" customClass="MainNavigationController" customModule="NIBM_Events" customModuleProvider="target" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="nqC-G6-xgL">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="HqD-ha-7Qg">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
+                    <connections>
+                        <segue destination="RND-K0-ivf" kind="relationship" relationship="rootViewController" id="Z7u-dp-iWA"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jkv-ux-MFd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-223.18840579710147" y="-60.267857142857139"/>
+        </scene>
+        <!--Touch Id View Controller-->
+        <scene sceneID="3Pg-zw-6Eo">
+            <objects>
+                <viewController storyboardIdentifier="TouchIdViewController" id="tEA-B2-euN" customClass="TouchIdViewController" customModule="NIBM_Events" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="adA-X9-jmT">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo" translatesAutoresizingMaskIntoConstraints="NO" id="5g7-Ox-Zwe">
+                                <rect key="frame" x="70.5" y="144" width="273" height="190"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="273" id="S0J-N6-RVX"/>
+                                    <constraint firstAttribute="height" constant="190" id="j7a-2y-XSI"/>
+                                </constraints>
+                                <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="medium"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="AUTHETICATE WITH TOUCH ID OR FACE ID" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5fS-1k-FOw">
+                                <rect key="frame" x="56" y="720" width="302" height="18"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q7t-0k-FUL">
+                                <rect key="frame" x="40" y="758" width="334" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="sbx-kd-k9f"/>
+                                    <constraint firstAttribute="width" constant="334" id="vA5-HC-jNl"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="14"/>
+                                <state key="normal" title="LOGOUT"/>
+                                <connections>
+                                    <action selector="logoutAction:" destination="tEA-B2-euN" eventType="touchUpInside" id="otz-XN-9Yf"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" lineBreakMode="clip" translatesAutoresizingMaskIntoConstraints="NO" id="rQP-ep-H9v">
+                                <rect key="frame" x="157" y="600" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="S77-Cf-0jY"/>
+                                    <constraint firstAttribute="width" constant="100" id="p9p-7I-xft"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
+                                <state key="normal" backgroundImage="faceIcon">
+                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="small" weight="regular"/>
+                                </state>
+                                <connections>
+                                    <action selector="biometricLoginAction:" destination="tEA-B2-euN" eventType="touchUpInside" id="wg3-za-tXw"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Q7t-0k-FUL" firstAttribute="top" secondItem="5fS-1k-FOw" secondAttribute="bottom" constant="20" id="8Fh-9N-Of8"/>
+                            <constraint firstItem="5fS-1k-FOw" firstAttribute="top" secondItem="rQP-ep-H9v" secondAttribute="bottom" constant="20" id="QaK-xk-Rrh"/>
+                            <constraint firstItem="5fS-1k-FOw" firstAttribute="centerX" secondItem="adA-X9-jmT" secondAttribute="centerX" id="UqW-qR-ALX"/>
+                            <constraint firstItem="Lhi-dZ-6ob" firstAttribute="bottom" secondItem="Q7t-0k-FUL" secondAttribute="bottom" constant="60" id="eOb-Wd-Fbh"/>
+                            <constraint firstItem="rQP-ep-H9v" firstAttribute="centerX" secondItem="adA-X9-jmT" secondAttribute="centerX" id="jYz-ed-ffi"/>
+                            <constraint firstItem="5g7-Ox-Zwe" firstAttribute="centerX" secondItem="adA-X9-jmT" secondAttribute="centerX" id="q5R-9a-tt9"/>
+                            <constraint firstItem="5g7-Ox-Zwe" firstAttribute="top" secondItem="Lhi-dZ-6ob" secondAttribute="top" constant="100" id="uhL-8O-ypQ"/>
+                            <constraint firstItem="Q7t-0k-FUL" firstAttribute="centerX" secondItem="adA-X9-jmT" secondAttribute="centerX" id="w6o-Vi-gRf"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Lhi-dZ-6ob"/>
+                    </view>
+                    <connections>
+                        <outlet property="biometricLoginOutlet" destination="rQP-ep-H9v" id="zkP-rY-ja2"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Jfw-ZS-OqS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-223.18840579710147" y="668.97321428571422"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Logo" width="512" height="384"/>
+        <image name="faceIcon" width="69.5" height="69.5"/>
+        <namedColor name="Black">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="DarkBlue">
+            <color red="0.2199999988079071" green="0.29600000381469727" blue="0.62900000810623169" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="LightBloe">
+            <color red="0.032999999821186066" green="0.30899998545646667" blue="0.6600000262260437" alpha="0.73400002717971802" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="White">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
