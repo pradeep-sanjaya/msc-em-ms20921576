@@ -128,13 +128,6 @@ class UserService {
         }
     }
     
-    // facebook
-    func signOutFacebook() -> Bool {
-        let loginManager = LoginManager()
-        loginManager.logOut()
-        return true
-    }
-    
     
     // user default
     public func getLocalUser() -> User {
@@ -206,7 +199,6 @@ class UserService {
     
     public func signOut() {
         let _ = signOutFirebase()
-        let _ = signOutFacebook()
         defaults.removeObject(forKey:"user")
     }
 

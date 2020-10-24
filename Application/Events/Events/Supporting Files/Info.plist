@@ -16,21 +16,8 @@
 	<string>$(PRODUCT_BUNDLE_PACKAGE_TYPE)</string>
 	<key>CFBundleShortVersionString</key>
 	<string>1.0</string>
-	<key>CFBundleURLTypes</key>
-	<array>
-		<dict>
-			<key>CFBundleURLSchemes</key>
-			<array>
-				<string>fb516966115689261</string>
-			</array>
-		</dict>
-	</array>
 	<key>CFBundleVersion</key>
 	<string>1</string>
-	<key>FacebookAppID</key>
-	<string>516966115689261</string>
-	<key>FacebookDisplayName</key>
-	<string>NIBM Events</string>
 	<key>LSApplicationQueriesSchemes</key>
 	<array>
 		<string>fbapi</string>
@@ -40,10 +27,6 @@
 	</array>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
-	<key>NSCalendarsUsageDescription</key>
-	<string>This app needs to access Calendars to share events</string>
-	<key>NSFaceIDUsageDescription</key>
-	<string>This app needs to FaceID to login</string>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>
@@ -84,5 +67,18 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>CFBundleURLTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>fb516966115689261</string>
+			</array>
+		</dict>
+	</array>
+    <key>NSCalendarsUsageDescription</key>
+    <string>This app needs to access Calendars to share events</string>
+    <key>NSFaceIDUsageDescription</key>
+    <string>This app needs to FaceID to login</string>
 </dict>
 </plist>
